@@ -98,45 +98,45 @@
 <meta name="keywords" content="核心动画">
 <meta property="og:type" content="article">
 <meta property="og:title" content="核心动画-变换">
-<meta property="og:url" content="http://blog.devjackcat.com/2017/04/10/ios-core-animation/ios-core-animation-chapter-5/index.html">
-<meta property="og:site_name" content="工作经验心得">
+<meta property="og:url" content="https://blog.uvdog.com/2017/04/10/ios-core-animation/ios-core-animation-chapter-5/index.html">
+<meta property="og:site_name" content="JackCat博客">
 <meta property="og:description" content="前言 很不幸，没人能告诉你母体是什么，你只能自己体会 – 骇客帝国  在第四章“可视效果”中，我们研究了一些增强图层和它的内容显示效果的一些技术，在这一章中，我们将要研究可以用来对图层旋转，摆放或者扭曲的CGAffineTransform，以及可以将扁平物体转换成三维空间对象的CATransform3D（而不是仅仅对圆角矩形添加下沉阴影）。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.1.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.2.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.3.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.4.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.5.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.6.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.7.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.8.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.9.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.10.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.11.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.12.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.13.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.14.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.15.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.16.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.17.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.18.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.19.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.20.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.21.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.22.jpeg">
-<meta property="og:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.23.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.1.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.2.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.3.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.4.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.5.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.6.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.7.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.8.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.9.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.10.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.11.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.12.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.13.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.14.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.15.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.16.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.17.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.18.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.19.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.20.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.21.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.22.jpeg">
+<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.23.jpeg">
 <meta property="og:updated_time" content="2020-03-05T07:42:01.795Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="核心动画-变换">
 <meta name="twitter:description" content="前言 很不幸，没人能告诉你母体是什么，你只能自己体会 – 骇客帝国  在第四章“可视效果”中，我们研究了一些增强图层和它的内容显示效果的一些技术，在这一章中，我们将要研究可以用来对图层旋转，摆放或者扭曲的CGAffineTransform，以及可以将扁平物体转换成三维空间对象的CATransform3D（而不是仅仅对圆角矩形添加下沉阴影）。">
-<meta name="twitter:image" content="http://blog.devjackcat.com/images/ios-core-animation/5.1.jpeg">
+<meta name="twitter:image" content="https://blog.uvdog.com/images/ios-core-animation/5.1.jpeg">
 
 
 
 
 
 
-  <link rel="canonical" href="http://blog.devjackcat.com/2017/04/10/ios-core-animation/ios-core-animation-chapter-5/"/>
+  <link rel="canonical" href="https://blog.uvdog.com/2017/04/10/ios-core-animation/ios-core-animation-chapter-5/"/>
 
 
 
@@ -146,7 +146,7 @@
   };
 </script>
 
-  <title>核心动画-变换 | 工作经验心得</title>
+  <title>核心动画-变换 | JackCat博客</title>
   
 
 
@@ -205,7 +205,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">工作经验心得</span>
+        <span class="site-title">JackCat博客</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -393,7 +393,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.devjackcat.com/2017/04/10/ios-core-animation/ios-core-animation-chapter-5/"/>
+    <link itemprop="mainEntityOfPage" href="https://blog.uvdog.com/2017/04/10/ios-core-animation/ios-core-animation-chapter-5/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JackCat"/>
@@ -402,7 +402,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="工作经验心得"/>
+      <meta itemprop="name" content="JackCat博客"/>
     </span>
 
     
