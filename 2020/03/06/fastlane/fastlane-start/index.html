@@ -94,27 +94,24 @@
 
 
 
-  <meta name="description" content="前言 复杂的组织都是专门化的Catharine R. Stimpson  到目前为止，我们已经探讨过CALayer类了，同时我们也了解到了一些非常有用的绘图和动画功能。但是Core Animation图层不仅仅能作用于图片和颜色而已。本章就会学习其他的一些图层类，进一步扩展使用Core Animation绘图的能力。">
-<meta name="keywords" content="核心动画">
+  <meta name="keywords" content="fastlane">
 <meta property="og:type" content="article">
-<meta property="og:title" content="核心动画-专用图层">
-<meta property="og:url" content="https://blog.uvdog.com/2017/04/10/ios-core-animation/ios-core-animation-chapter-6/index.html">
-<meta property="og:site_name" content="JackCat博客">
-<meta property="og:description" content="前言 复杂的组织都是专门化的Catharine R. Stimpson  到目前为止，我们已经探讨过CALayer类了，同时我们也了解到了一些非常有用的绘图和动画功能。但是Core Animation图层不仅仅能作用于图片和颜色而已。本章就会学习其他的一些图层类，进一步扩展使用Core Animation绘图的能力。">
+<meta property="og:title" content="fastlane基础篇">
+<meta property="og:url" content="https://blog.uvdog.com/2020/03/06/fastlane/fastlane-start/index.html">
+<meta property="og:site_name" content="uvdog">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://blog.uvdog.com/images/ios-core-animation/5.23.jpeg">
-<meta property="og:updated_time" content="2020-03-05T07:42:05.227Z">
+<meta property="og:image" content="https://blog.uvdog.com/images/fastlane/fastlane_logo.png">
+<meta property="og:updated_time" content="2020-03-06T03:47:32.200Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="核心动画-专用图层">
-<meta name="twitter:description" content="前言 复杂的组织都是专门化的Catharine R. Stimpson  到目前为止，我们已经探讨过CALayer类了，同时我们也了解到了一些非常有用的绘图和动画功能。但是Core Animation图层不仅仅能作用于图片和颜色而已。本章就会学习其他的一些图层类，进一步扩展使用Core Animation绘图的能力。">
-<meta name="twitter:image" content="https://blog.uvdog.com/images/ios-core-animation/5.23.jpeg">
+<meta name="twitter:title" content="fastlane基础篇">
+<meta name="twitter:image" content="https://blog.uvdog.com/images/fastlane/fastlane_logo.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://blog.uvdog.com/2017/04/10/ios-core-animation/ios-core-animation-chapter-6/"/>
+  <link rel="canonical" href="https://blog.uvdog.com/2020/03/06/fastlane/fastlane-start/"/>
 
 
 
@@ -124,7 +121,7 @@
   };
 </script>
 
-  <title>核心动画-专用图层 | JackCat博客</title>
+  <title>fastlane基础篇 | uvdog</title>
   
 
 
@@ -183,7 +180,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">JackCat博客</span>
+        <span class="site-title">uvdog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -371,16 +368,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.uvdog.com/2017/04/10/ios-core-animation/ios-core-animation-chapter-6/"/>
+    <link itemprop="mainEntityOfPage" href="https://blog.uvdog.com/2020/03/06/fastlane/fastlane-start/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="JackCat"/>
-      <meta itemprop="description" content="一个iOS开发菜鸡"/>
+      <meta itemprop="name" content="uvdog"/>
+      <meta itemprop="description" content=""/>
       <meta itemprop="image" content="/images/avatar.jpeg"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JackCat博客"/>
+      <meta itemprop="name" content="uvdog"/>
     </span>
 
     
@@ -388,7 +385,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">核心动画-专用图层
+          <h1 class="post-title" itemprop="name headline">fastlane基础篇
 
               
             
@@ -414,24 +411,12 @@
                 
               
 
-              <time title="创建时间：2017-04-10 14:09:25" itemprop="dateCreated datePublished" datetime="2017-04-10T14:09:25+08:00">2017-04-10</time>
+              <time title="创建时间：2020-03-06 10:19:35 / 修改时间：11:47:32" itemprop="dateCreated datePublished" datetime="2020-03-06T10:19:35+08:00">2020-03-06</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-03-05 15:42:05" itemprop="dateModified" datetime="2020-03-05T15:42:05+08:00">2020-03-05</time>
               
             
           </span>
@@ -448,7 +433,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/fastlane/" itemprop="url" rel="index"><span itemprop="name">fastlane</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/fastlane/自动化集成/" itemprop="url" rel="index"><span itemprop="name">自动化集成</span></a></span>
 
                 
                 
@@ -482,29 +474,30 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
-<p>复杂的组织都是专门化的<br>Catharine R. Stimpson</p>
-</blockquote>
-<p>到目前为止，我们已经探讨过CALayer类了，同时我们也了解到了一些非常有用的绘图和动画功能。但是Core Animation图层不仅仅能作用于图片和颜色而已。本章就会学习其他的一些图层类，进一步扩展使用Core Animation绘图的能力。</p>
+        <p><img src="/images/fastlane/fastlane_logo.png" alt=""></p>
 <a id="more"></a>
-<h1 id="CAShapeLayer"><a href="#CAShapeLayer" class="headerlink" title="CAShapeLayer"></a>CAShapeLayer</h1><p>在第四章『视觉效果』我们学习到了不使用图片的情况下用CGPath去构造任意形状的阴影。如果我们能用同样的方式创建相同形状的图层就好了。</p>
-<p>CAShapeLayer是一个通过矢量图形而不是bitmap来绘制的图层子类。你指定诸如颜色和线宽等属性，用CGPath来定义想要绘制的图形，最后CAShapeLayer就自动渲染出来了。当然，你也可以用Core Graphics直接向原始的CALyer的内容中绘制一个路径，相比直下，使用CAShapeLayer有以下一些优点：</p>
-<ul>
-<li>渲染快速。CAShapeLayer使用了硬件加速，绘制同一图形会比用Core Graphics快很多。</li>
-<li>高效使用内存。一个CAShapeLayer不需要像普通CALayer一样创建一个寄宿图形，所以无论有多大，都不会占用太多的内存。</li>
-<li>不会被图层边界剪裁掉。一个CAShapeLayer可以在边界之外绘制。你的图层路径不会像在使用Core Graphics的普通CALayer一样被剪裁掉（如我们在第二章所见）。</li>
-<li>不会出现像素化。当你给CAShapeLayer做3D变换时，它不像一个有寄宿图的普通图层一样变得像素化。</li>
-</ul>
-<h2 id="创建一个CGPath"><a href="#创建一个CGPath" class="headerlink" title="创建一个CGPath"></a>创建一个CGPath</h2><p>CAShapeLayer可以用来绘制所有能够通过CGPath来表示的形状。这个形状不一定要闭合，图层路径也不一定要不可破，事实上你可以在一个图层上绘制好几个不同的形状。你可以控制一些属性比如lineWith（线宽，用点表示单位），lineCap（线条结尾的样子），和lineJoin（线条之间的结合点的样子）；但是在图层层面你只有一次机会设置这些属性。如果你想用不同颜色或风格来绘制多个形状，就不得不为每个形状准备一个图层了。</p>
-<p>清单6.1 的代码用一个CAShapeLayer渲染一个简单的火柴人。CAShapeLayer属性是CGPathRef类型，但是我们用UIBezierPath帮助类创建了图层路径，这样我们就不用考虑人工释放CGPath了。图6.1是代码运行的结果。虽然还不是很完美，但是总算知道了大意对吧！</p>
-<p>清单6.1 用CAShapeLayer绘制一个火柴人</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="meta-string">"DrawingView.h"</span></span></span><br><span class="line"><span class="meta">#import </span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">ViewController</span> ()</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">weak</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UIView</span> *containerView;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">ViewController</span></span></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)viewDidLoad</span><br><span class="line">&#123;</span><br><span class="line">  [<span class="keyword">super</span> viewDidLoad];</span><br><span class="line">  <span class="comment">//create path</span></span><br><span class="line">  <span class="built_in">UIBezierPath</span> *path = [[<span class="built_in">UIBezierPath</span> alloc] init];</span><br><span class="line">  [path moveToPoint:<span class="built_in">CGPointMake</span>(<span class="number">175</span>, <span class="number">100</span>)];</span><br><span class="line">  </span><br><span class="line">  [path addArcWithCenter:<span class="built_in">CGPointMake</span>(<span class="number">150</span>, <span class="number">100</span>) radius:<span class="number">25</span> startAngle:<span class="number">0</span> endAngle:<span class="number">2</span>*M_PI clockwise:<span class="literal">YES</span>];</span><br><span class="line">  [path moveToPoint:<span class="built_in">CGPointMake</span>(<span class="number">150</span>, <span class="number">125</span>)];</span><br><span class="line">  [path addLineToPoint:<span class="built_in">CGPointMake</span>(<span class="number">150</span>, <span class="number">175</span>)];</span><br><span class="line">  [path addLineToPoint:<span class="built_in">CGPointMake</span>(<span class="number">125</span>, <span class="number">225</span>)];</span><br><span class="line">  [path moveToPoint:<span class="built_in">CGPointMake</span>(<span class="number">150</span>, <span class="number">175</span>)];</span><br><span class="line">  [path addLineToPoint:<span class="built_in">CGPointMake</span>(<span class="number">175</span>, <span class="number">225</span>)];</span><br><span class="line">  [path moveToPoint:<span class="built_in">CGPointMake</span>(<span class="number">100</span>, <span class="number">150</span>)];</span><br><span class="line">  [path addLineToPoint:<span class="built_in">CGPointMake</span>(<span class="number">200</span>, <span class="number">150</span>)];</span><br><span class="line"></span><br><span class="line">  <span class="comment">//create shape layer</span></span><br><span class="line">  <span class="built_in">CAShapeLayer</span> *shapeLayer = [<span class="built_in">CAShapeLayer</span> layer];</span><br><span class="line">  shapeLayer.strokeColor = [<span class="built_in">UIColor</span> redColor].CGColor;</span><br><span class="line">  shapeLayer.fillColor = [<span class="built_in">UIColor</span> clearColor].CGColor;</span><br><span class="line">  shapeLayer.lineWidth = <span class="number">5</span>;</span><br><span class="line">  shapeLayer.lineJoin = kCALineJoinRound;</span><br><span class="line">  shapeLayer.lineCap = kCALineCapRound;</span><br><span class="line">  shapeLayer.path = path.CGPath;</span><br><span class="line">  <span class="comment">//add it to our view</span></span><br><span class="line">  [<span class="keyword">self</span>.containerView.layer addSublayer:shapeLayer];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
-<p><img src="/images/ios-core-animation/5.23.jpeg" alt="图6.1 用CAShapeLayer绘制一个简单的火柴人"></p>
-<h2 id="圆角"><a href="#圆角" class="headerlink" title="圆角"></a>圆角</h2><p>第二章里面提到了CAShapeLayer为创建圆角视图提供了一个方法，就是CALayer的cornerRadius属性（译者注：其实是在第四章提到的）。虽然使用CAShapeLayer类需要更多的工作，但是它有一个优势就是可以<strong>单独指定每个角</strong>。</p>
-<p>我们创建圆角矩形其实就是人工绘制单独的直线和弧度，但是事实上UIBezierPath有自动绘制圆角矩形的构造方法，下面这段代码绘制了一个有三个圆角一个直角的矩形：</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//define path parameters</span></span><br><span class="line"><span class="built_in">CGRect</span> rect = <span class="built_in">CGRectMake</span>(<span class="number">50</span>, <span class="number">50</span>, <span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line"><span class="built_in">CGSize</span> radii = <span class="built_in">CGSizeMake</span>(<span class="number">20</span>, <span class="number">20</span>);</span><br><span class="line"><span class="built_in">UIRectCorner</span> corners = <span class="built_in">UIRectCornerTopRight</span> | <span class="built_in">UIRectCornerBottomRight</span> | <span class="built_in">UIRectCornerBottomLeft</span>;</span><br><span class="line"><span class="comment">//create path</span></span><br><span class="line"><span class="built_in">UIBezierPath</span> *path = [<span class="built_in">UIBezierPath</span> bezierPathWithRoundedRect:rect byRoundingCorners:corners cornerRadii:radii];</span><br></pre></td></tr></table></figure>
-<p>我们可以通过这个图层路径绘制一个既有直角又有圆角的视图。如果我们想依照此图形来剪裁视图内容，我们可以把CAShapeLayer作为视图的宿主图层，而不是添加一个子视图（图层蒙板的详细解释见第四章『视觉效果』）。</p>
-<h1 id="CATextLayer"><a href="#CATextLayer" class="headerlink" title="CATextLayer"></a>CATextLayer</h1><h1 id="CATransformLayer"><a href="#CATransformLayer" class="headerlink" title="CATransformLayer"></a>CATransformLayer</h1><h1 id="CAGradientLayer"><a href="#CAGradientLayer" class="headerlink" title="CAGradientLayer"></a>CAGradientLayer</h1><h1 id="CAReplicatorLayer"><a href="#CAReplicatorLayer" class="headerlink" title="CAReplicatorLayer"></a>CAReplicatorLayer</h1><h1 id="CAScrollLayer"><a href="#CAScrollLayer" class="headerlink" title="CAScrollLayer"></a>CAScrollLayer</h1><h1 id="CATiledLayer"><a href="#CATiledLayer" class="headerlink" title="CATiledLayer"></a>CATiledLayer</h1><h1 id="CAEmitterLayer"><a href="#CAEmitterLayer" class="headerlink" title="CAEmitterLayer"></a>CAEmitterLayer</h1><h1 id="CAEAGLLayer"><a href="#CAEAGLLayer" class="headerlink" title="CAEAGLLayer"></a>CAEAGLLayer</h1><h1 id="AVPlayerLayer"><a href="#AVPlayerLayer" class="headerlink" title="AVPlayerLayer"></a>AVPlayerLayer</h1><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><blockquote>
+<p>fastlane is the easiest way to automate beta deployments and releases for your iOS and Android apps. 🚀 It handles all tedious tasks, like generating screenshots, dealing with code signing, and releasing your application.</p>
+</blockquote>
+<p><a href="https://docs.fastlane.tools/" target="_blank" rel="noopener">fastlane</a>通过最简单的方式为iOS和Android应用实现自动化测试、部署、发布。它可以帮我们处理自动封面截图、签名、发布繁琐易错的事情。</p>
+<p>由于本人从事iOS开发，下面都是以iOS为例进行操作。</p>
+<p>通过下面简单的脚本配置即可打包发布。</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">lane <span class="symbol">:release</span> <span class="keyword">do</span></span><br><span class="line">  capture_screenshots</span><br><span class="line">  build_app</span><br><span class="line">  upload_to_app_store       <span class="comment"># Upload the screenshots and the binary to iTunes</span></span><br><span class="line">  slack                     <span class="comment"># Let your team-mates know the new version is live</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>项目根目录执行脚本即可</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastlane <span class="built_in">release</span></span><br></pre></td></tr></table></figure>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><strong>1.fastlane需要安装Xcode命令行工具。如果已经安装了Xcode，则跳过这一步</strong></p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-<span class="keyword">select</span> <span class="comment">--install</span></span><br></pre></td></tr></table></figure>
+<p><strong>2.安装fastlane有两种方式RubyGems、Homebrew</strong></p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Using RubyGems</span></span><br><span class="line">sudo gem <span class="keyword">install </span>fastlane -NV</span><br><span class="line"></span><br><span class="line"><span class="comment"># Alternatively using Homebrew</span></span><br><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>fastlane</span><br></pre></td></tr></table></figure>
+<p><strong>3.进入项目根目录，进行fastlane初始化</strong></p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">fastlane init</span></span><br></pre></td></tr></table></figure>
+<h2 id="AdHoc打包"><a href="#AdHoc打包" class="headerlink" title="AdHoc打包"></a>AdHoc打包</h2><p>在fastFile文件中添加代码</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$scheme</span> = <span class="string">"scheme"</span></span><br><span class="line"><span class="variable">$workspace</span> = <span class="string">"项目名.xcworkspace"</span></span><br><span class="line"><span class="variable">$bundleId</span> = <span class="string">"bundleId"</span></span><br><span class="line"><span class="variable">$provisioningProfile_adhoc</span> = <span class="string">"AdHoc描述文件"</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$pgyer_key</span> = <span class="string">"pgyer_key"</span></span><br><span class="line"><span class="variable">$pgyer_user_key</span> = <span class="string">"pgyer_user_key"</span></span><br><span class="line"></span><br><span class="line">desc <span class="string">"打 adhoc debug 测试包"</span></span><br><span class="line">   lane <span class="symbol">:adhoc_debug</span> <span class="keyword">do</span></span><br><span class="line">     build_app(</span><br><span class="line">         <span class="symbol">scheme:</span> <span class="variable">$scheme</span>,</span><br><span class="line">         <span class="symbol">workspace:</span> <span class="variable">$workspace</span>,</span><br><span class="line">         <span class="symbol">include_bitcode:</span> <span class="keyword">false</span>,</span><br><span class="line">         <span class="symbol">configuration:</span> <span class="string">"Debug"</span>, <span class="comment"># 测试环境数据Debug, 线上环境数据Release</span></span><br><span class="line">         <span class="symbol">silent:</span> <span class="keyword">false</span>,</span><br><span class="line">         <span class="symbol">include_symbols:</span> <span class="keyword">true</span>,</span><br><span class="line">         <span class="symbol">export_options:</span> &#123;</span><br><span class="line">           <span class="symbol">method:</span> <span class="string">"ad-hoc"</span>,</span><br><span class="line">           <span class="symbol">signingStyle:</span> <span class="string">"manual"</span>,</span><br><span class="line">           <span class="symbol">stripSwiftSymbols:</span> <span class="keyword">true</span>,</span><br><span class="line">           <span class="symbol">uploadBitcode:</span> <span class="keyword">false</span>,</span><br><span class="line">           <span class="symbol">uploadSymbols:</span> <span class="keyword">false</span>,</span><br><span class="line">           <span class="symbol">provisioningProfiles:</span> &#123;</span><br><span class="line">             <span class="variable">$bundleId</span> =&gt; <span class="variable">$provisioningProfile_adhoc</span></span><br><span class="line">           &#125;</span><br><span class="line">         &#125;</span><br><span class="line">     )</span><br><span class="line">     </span><br><span class="line">     <span class="comment">#打包完成后上传至蒲公英</span></span><br><span class="line">     pgyer(<span class="symbol">api_key:</span> <span class="variable">$pgyer_key</span>, <span class="symbol">user_key:</span> <span class="variable">$pgyer_user_key</span>)</span><br><span class="line">   <span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>执行脚本<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">fastlane</span> adhoc_debug</span><br></pre></td></tr></table></figure></p>
+<h2 id="Release打包"><a href="#Release打包" class="headerlink" title="Release打包"></a>Release打包</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">$scheme</span> <span class="string">=</span> <span class="string">"scheme"</span></span><br><span class="line"><span class="string">$workspace</span> <span class="string">=</span> <span class="string">"项目名.xcworkspace"</span></span><br><span class="line"><span class="string">$bundleId</span> <span class="string">=</span> <span class="string">"bundleId"</span></span><br><span class="line"><span class="string">$provisioningProfile_release</span> <span class="string">=</span> <span class="string">"Release项目文件"</span></span><br><span class="line"></span><br><span class="line"><span class="string">$AppleId</span> <span class="string">=</span> <span class="string">"AppleId"</span></span><br><span class="line"><span class="string">$ApplePwd</span> <span class="string">=</span> <span class="string">"专用密码"</span> <span class="comment"># 上传AppStore专用密码 https://appleid.apple.com/account/manage</span></span><br><span class="line"><span class="string">$SmsPhoneNumber</span> <span class="string">=</span> <span class="string">"双向验证手机号"</span> <span class="comment"># 上传时接收验证码的手机号，格式"+86 13011112222"</span></span><br><span class="line"></span><br><span class="line"><span class="string">desc</span> <span class="string">"打生产包并上传至AppStore"</span> </span><br><span class="line">   <span class="string">lane</span> <span class="string">:release</span> <span class="string">do</span></span><br><span class="line">     <span class="string">build_app(</span></span><br><span class="line"><span class="attr">         scheme:</span> <span class="string">$scheme,</span></span><br><span class="line"><span class="attr">         workspace:</span> <span class="string">$workspace,</span></span><br><span class="line"><span class="attr">         include_bitcode:</span> <span class="literal">false</span><span class="string">,</span></span><br><span class="line">         <span class="comment">#configuration: "Release",</span></span><br><span class="line"><span class="attr">         silent:</span> <span class="literal">false</span><span class="string">,</span></span><br><span class="line"><span class="attr">         include_symbols:</span> <span class="literal">true</span><span class="string">,</span></span><br><span class="line"><span class="attr">         clean:</span> <span class="literal">true</span><span class="string">,</span>  <span class="comment"># 执行清理</span></span><br><span class="line"><span class="attr">         export_options:</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">           method:</span> <span class="string">"app-store"</span><span class="string">,</span></span><br><span class="line"><span class="attr">           signingStyle:</span><span class="string">"manual"</span><span class="string">,</span></span><br><span class="line"><span class="attr">           stripSwiftSymbols:</span><span class="literal">true</span><span class="string">,</span></span><br><span class="line"><span class="attr">           uploadBitcode:</span><span class="literal">false</span><span class="string">,</span></span><br><span class="line"><span class="attr">           uploadSymbols:</span><span class="literal">false</span><span class="string">,</span></span><br><span class="line"><span class="attr">           provisioningProfiles:</span> <span class="string">&#123;</span></span><br><span class="line">             <span class="string">$bundleId</span> <span class="string">=&gt;</span> <span class="string">$provisioningProfile_release</span></span><br><span class="line">           <span class="string">&#125;</span></span><br><span class="line">         <span class="string">&#125;</span></span><br><span class="line">     <span class="string">)</span></span><br><span class="line"></span><br><span class="line">     <span class="comment"># 设置fastlane环境变量</span></span><br><span class="line">     <span class="comment"># 接受验证码的手机号，格式"+86 13011112222"</span></span><br><span class="line">     <span class="string">ENV["SPACESHIP_2FA_SMS_DEFAULT_PHONE_NUMBER"]</span> <span class="string">=</span> <span class="string">$SmsPhoneNumber</span></span><br><span class="line">     </span><br><span class="line">     <span class="comment"># 上传包专用密码，非AppleId密码</span></span><br><span class="line">     <span class="comment"># https://appleid.apple.com/account/manage      ENV["FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD"] = $ApplePwd</span></span><br><span class="line"></span><br><span class="line">     <span class="comment"># 上传appstore</span></span><br><span class="line">     <span class="string">upload_to_app_store(</span> </span><br><span class="line"><span class="attr">       username:</span> <span class="string">$AppleId,</span></span><br><span class="line"><span class="attr">       skip_metadata:</span> <span class="literal">true</span><span class="string">,</span> <span class="comment">#跳过媒体文件上传</span></span><br><span class="line"><span class="attr">       skip_screenshots:</span> <span class="literal">true</span><span class="string">,</span> <span class="comment">#跳过截图文件</span></span><br><span class="line"><span class="attr">       precheck_include_in_app_purchases:</span> <span class="literal">false</span><span class="string">,</span> <span class="comment">#无需检查内购</span></span><br><span class="line"><span class="attr">       ignore_language_directory_validation:</span> <span class="literal">false</span><span class="string">,</span></span><br><span class="line"><span class="attr">       run_precheck_before_submit:</span> <span class="literal">false</span></span><br><span class="line">     <span class="string">)</span> </span><br><span class="line">   <span class="string">end</span></span><br></pre></td></tr></table></figure>
+<p>执行脚本</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastlane <span class="built_in">release</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -527,7 +520,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/核心动画/" rel="tag"># 核心动画</a>
+            <a href="/tags/fastlane/" rel="tag"># fastlane</a>
           
         </div>
       
@@ -540,8 +533,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/09/design-pattern/design-pattern-principle-5/" rel="next" title="设计模式原则-迪米特法则">
-                <i class="fa fa-chevron-left"></i> 设计模式原则-迪米特法则
+              <a href="/2019/02/11/2019-starting/" rel="next" title="2019, 改变自己">
+                <i class="fa fa-chevron-left"></i> 2019, 改变自己
               </a>
             
           </div>
@@ -549,10 +542,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/10/ios-core-animation/ios-core-animation-chapter-5/" rel="prev" title="核心动画-变换">
-                核心动画-变换 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -617,10 +606,10 @@
             
               <img class="site-author-image" itemprop="image"
                 src="/images/avatar.jpeg"
-                alt="JackCat"/>
+                alt="uvdog"/>
             
-              <p class="site-author-name" itemprop="name">JackCat</p>
-              <p class="site-description motion-element" itemprop="description">一个iOS开发菜鸡</p>
+              <p class="site-author-name" itemprop="name">uvdog</p>
+              <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
           
@@ -630,7 +619,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -657,7 +646,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -669,6 +662,8 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
                     
+                    
+                      
                     
                       
                     
@@ -726,7 +721,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CAShapeLayer"><span class="nav-number">2.</span> <span class="nav-text">CAShapeLayer</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建一个CGPath"><span class="nav-number">2.1.</span> <span class="nav-text">创建一个CGPath</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#圆角"><span class="nav-number">2.2.</span> <span class="nav-text">圆角</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CATextLayer"><span class="nav-number">3.</span> <span class="nav-text">CATextLayer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CATransformLayer"><span class="nav-number">4.</span> <span class="nav-text">CATransformLayer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CAGradientLayer"><span class="nav-number">5.</span> <span class="nav-text">CAGradientLayer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CAReplicatorLayer"><span class="nav-number">6.</span> <span class="nav-text">CAReplicatorLayer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CAScrollLayer"><span class="nav-number">7.</span> <span class="nav-text">CAScrollLayer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CATiledLayer"><span class="nav-number">8.</span> <span class="nav-text">CATiledLayer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CAEmitterLayer"><span class="nav-number">9.</span> <span class="nav-text">CAEmitterLayer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CAEAGLLayer"><span class="nav-number">10.</span> <span class="nav-text">CAEAGLLayer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#AVPlayerLayer"><span class="nav-number">11.</span> <span class="nav-text">AVPlayerLayer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">12.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AdHoc打包"><span class="nav-number">3.</span> <span class="nav-text">AdHoc打包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Release打包"><span class="nav-number">4.</span> <span class="nav-text">Release打包</span></a></li></ol></div>
             
 
           </div>
@@ -750,7 +745,7 @@
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">JackCat</span>
+  <span class="author" itemprop="copyrightHolder">uvdog</span>
 
   
 
